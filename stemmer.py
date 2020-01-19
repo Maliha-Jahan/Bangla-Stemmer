@@ -1,9 +1,9 @@
 from functools import reduce
-dictionary_ = list(filter(''.__ne__, open('E:/Thesis/Data/Final/kept.txt',
+dictionary_ = list(filter(''.__ne__, open('kept.txt',
                                           mode='r', encoding='utf-8').read().split("\n")))
-dictionary_en_ = list(filter(''.__ne__, open('E:/Thesis/Data/Final/Dictionary_en.txt',
+dictionary_en_ = list(filter(''.__ne__, open('Dictionary_en.txt',
                                           mode='r', encoding='utf-8').read().split("\n")))
-dictionary_en_stemmed_ = list(filter(''.__ne__, open('E:/Thesis/Data/Final/kept_en.txt',
+dictionary_en_stemmed_ = list(filter(''.__ne__, open('kept_en.txt',
                                           mode='r', encoding='utf-8').read().split("\n")))
 suffixes_en = ['ly', 'ness', 'iness', 'ily', 'ish', "n't", "'ve", "'v", "'s", 'ed', "'ll", "'m", "'d",
                'ing', 'ess', 'es', 'er', 'y', 'ism', 's', 'ous', 'ty', 'ity']
@@ -22,7 +22,7 @@ def create_dictionary(input_dictionary, div1, div2):
 
 
 def create_dict(div1):
-    listofwords2 = open('E:/Thesis/Data/Final/suffixes.txt', mode='r', encoding='utf-8').read().split("\n")
+    listofwords2 = open('suffixes.txt', mode='r', encoding='utf-8').read().split("\n")
     file2 = list(filter(''.__ne__, listofwords2))
     output_dictionary = [[] for _ in range(div1)]
     for word in file2:
@@ -129,3 +129,6 @@ def stemming(word):
                     return new_word
     return word
 
+
+print(stemming2("fearlessness"))
+print(stemming("গরুগুলোকে"))
