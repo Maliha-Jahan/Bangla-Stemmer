@@ -1,2 +1,2 @@
 # Bangla-Stemmer
-Stemmer for Bangla text built using Python
+Stemmer for Bangla and English text built using Python
